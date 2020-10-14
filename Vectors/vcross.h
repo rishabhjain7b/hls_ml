@@ -5,6 +5,9 @@
  * Description: Vector Cross Product
  * ***************************************/
 
+#ifndef __VCROSS__
+#define __VCROSS__
+
 #include <iostream>
 #include <assert.h>
 
@@ -12,7 +15,7 @@
 // If Vectors A and B have different sizes,
 // use smaller size amongst the two
 
-#define MIN(a, b) (a<b?a:b)
+#define MIN(a, b) (a<=b?a:b)
 
 template <typename T, int S1, int S2>
 T vcross (T *input1, T *input2) 
@@ -35,3 +38,5 @@ T vcross (T *input1, T *input2)
 
     return res;
 }
+
+#endif // __VCROSS__

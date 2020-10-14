@@ -5,6 +5,9 @@
  * Description: Vector Product
  * ***************************************/
 
+#ifndef __VPROD__
+#define __VPROD__
+
 #include <iostream>
 #include <assert.h>
 
@@ -12,7 +15,7 @@
 // If Vectors A and B have different sizes,
 // use smaller size amongst the two
 
-#define MIN(a, b) (a<b?a:b)
+#define MIN(a, b) (a<=b?a:b)
 
 template <typename T, int S1, int S2>
 T* vprod (T *input1, T *input2) 
@@ -35,3 +38,5 @@ T* vprod (T *input1, T *input2)
 
     return res;
 }
+
+#endif // __VPROD__
